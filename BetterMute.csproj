@@ -7,8 +7,8 @@
     <ProjectGuid>{B3E18056-A283-4430-96CE-696D878C7BAC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TestingPlugin</RootNamespace>
-    <AssemblyName>TestingPlugin</AssemblyName>
+    <RootNamespace>BetterMute</RootNamespace>
+    <AssemblyName>BetterMute</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -33,10 +33,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Assembly-CSharp-firstpass">
-      <HintPath>..\..\..\..\Downloads\Dev\Assembly-CSharp-firstpass.dll</HintPath>
+      <HintPath>..\..\..\Downloads\Dev\Assembly-CSharp-firstpass.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp-Publicized">
-      <HintPath>..\..\..\..\Downloads\Dev\Assembly-CSharp-Publicized.dll</HintPath>
+      <HintPath>..\..\..\Downloads\Dev\Assembly-CSharp-Publicized.dll</HintPath>
     </Reference>
     <Reference Include="CommandSystem.Core">
       <HintPath>..\..\..\Downloads\Dev\CommandSystem.Core.dll</HintPath>
@@ -81,9 +81,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Commands\Test.cs" />
+    <Compile Include="Commands\MuteCommand.cs" />
     <Compile Include="Config.cs" />
-    <Compile Include="EventHandlers\PlayerHandlers.cs" />
     <Compile Include="EventHandlers\ServerHandlers.cs" />
     <Compile Include="Plugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
