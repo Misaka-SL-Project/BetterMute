@@ -1,0 +1,2 @@
+# TemplatePlugin
+EXILED Plugin template
