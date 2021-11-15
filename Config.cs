@@ -9,7 +9,7 @@ namespace BetterMute
     public class Config : IConfig
     {
         public bool IsEnabled { get; set; } = true;
-        [Description("Path of the Mute files")]
+        [Description("Path of the Mute file")]
         public string DataDir { get; set; } = Path.Combine(Paths.Plugins, "BetterMute");
     }
 }
