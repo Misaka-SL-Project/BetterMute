@@ -36,9 +36,6 @@ namespace BetterMute.EventHandlers
         public void OnVerified(VerifiedEventArgs ev)
         {
             MuteList = GetMuteList();
-            Log.Info(ev.Player.UserId);
-            Log.Info(MuteList[0].Split(' ').ElementAt(0));
-            Log.Info(MuteList[1].Split(' ').ElementAt(0));
             if (ev.Player.IsMuted || ev.Player.IsIntercomMuted)
             {
                 for (int i = 0; i < MuteList.Count(); i++)
