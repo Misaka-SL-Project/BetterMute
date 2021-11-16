@@ -1,7 +1,7 @@
 ﻿using System;
 using Exiled.API.Features;
 using System.IO;
-using static BetterMute.EventHandlers.ServerHandlers;
+using static BetterMute.EventHandlers.EventHandlers;
 
 namespace BetterMute
 {
@@ -9,17 +9,17 @@ namespace BetterMute
     public class Plugin : Plugin<Config>
     {
     	public override string Author { get; } = "Killla";
-	public override string Name { get; } = "Better Mute";
-	public override string Prefix { get; } = "BetterMute";
-	public override Version Version { get; } = new Version(1, 0, 2);
+	    public override string Name { get; } = "Better Mute";
+	    public override string Prefix { get; } = "BetterMute";
+	    public override Version Version { get; } = new Version(1, 0, 3);
         public override Version RequiredExiledVersion { get; } = new Version(3, 0, 0);
 
-        public ServerHandlers ServerHandlers;
+        public EventHandlers.EventHandlers ServerHandlers;
 
 
         public override void OnEnabled()
         {
-            ServerHandlers = new ServerHandlers(this);
+            ServerHandlers = new EventHandlers.EventHandlers(this);
             Exiled.Events.Handlers.Server.RoundEnded += ServerHandlers.OnRoundEnded;
             Exiled.Events.Handlers.Player.Verified += ServerHandlers.OnVerified;
             path = Config.DataDir;

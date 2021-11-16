@@ -83,7 +83,7 @@
   <ItemGroup>
     <Compile Include="Commands\MuteCommand.cs" />
     <Compile Include="Config.cs" />
-    <Compile Include="EventHandlers\ServerHandlers.cs" />
+    <Compile Include="EventHandlers\EventHandlers.cs" />
     <Compile Include="Plugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

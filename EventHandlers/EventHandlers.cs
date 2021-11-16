@@ -7,13 +7,13 @@ using System.IO;
 
 namespace BetterMute.EventHandlers
 {
-    public class ServerHandlers
+    public class EventHandlers
     {
         private readonly Plugin _plugin;
-        public ServerHandlers(Plugin plugin) => this._plugin = plugin;
+        public EventHandlers(Plugin plugin) => this._plugin = plugin;
         static Dictionary<Player, int> MutedPlayers = new Dictionary<Player, int>();
         public static string path;
-
+        public static string[] MuteList;
         public void OnRoundEnded(RoundEndedEventArgs ev)
         {
             foreach (Player player in MutedPlayers.Keys)
@@ -32,10 +32,10 @@ namespace BetterMute.EventHandlers
                     }
                 }
             }
+            MutedPlayers.Clear();
         }
         public void OnVerified(VerifiedEventArgs ev)
         {
-            MuteList = GetMuteList();
             if (ev.Player.IsMuted || ev.Player.IsIntercomMuted)
             {
                 for (int i = 0; i < MuteList.Count(); i++)
@@ -50,7 +50,6 @@ namespace BetterMute.EventHandlers
         }
         public static void UpdateMuteStatus(string userid, int duration)
         {
-            MuteList = GetMuteList();
             for (int i = 0; i < MuteList.Count(); i++)
             {
                 if (MuteList[i].Split(' ').First() == userid)
@@ -63,7 +62,6 @@ namespace BetterMute.EventHandlers
         }
         public static void RemoveMuteStatus(string userid)
         {
-            MuteList = GetMuteList();
             for (int i = 0; i < MuteList.Count(); i++)
             {
                 if (MuteList[i].Split(' ').First() == userid)
@@ -83,7 +81,6 @@ namespace BetterMute.EventHandlers
         {
             return File.ReadAllLines(path);
         }
-        public static string[] MuteList;
     }
 
 }

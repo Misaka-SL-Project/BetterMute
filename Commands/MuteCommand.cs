@@ -1,7 +1,7 @@
 ﻿using System;
 using CommandSystem;
 using Exiled.API.Features;
-using static BetterMute.EventHandlers.ServerHandlers;
+using static BetterMute.EventHandlers.EventHandlers;
 
 namespace BetterMute
 {
