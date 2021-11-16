@@ -74,7 +74,8 @@ namespace BetterMute.EventHandlers
         }
         public static void AddingMuteStatus(string userid, int duration)
         {
-            File.AppendAllText(path, $"\r\n{userid} {duration}");
+            MuteList.Append($"{userid} {duration}");
+            File.WriteAllLines(path, MuteList);
             MutedPlayers.Add(Player.Get(userid), duration);
         }
         public static string[] GetMuteList()

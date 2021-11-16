@@ -11,7 +11,7 @@ namespace BetterMute
     	public override string Author { get; } = "Killla";
 	    public override string Name { get; } = "Better Mute";
 	    public override string Prefix { get; } = "BetterMute";
-	    public override Version Version { get; } = new Version(1, 0, 3);
+	    public override Version Version { get; } = new Version(1, 0, 4);
         public override Version RequiredExiledVersion { get; } = new Version(3, 0, 0);
 
         public EventHandlers.EventHandlers ServerHandlers;
