@@ -14,12 +14,9 @@ namespace BetterMute
 
         public bool Execute(ArraySegment<string> arguments, ICommandSender sender, out string response)
         {
-            Log.Info(1);
             if (Int32.TryParse(arguments.At(0), out int result))
             {
-                Log.Info(2);
                 Player player = Player.Get(result);
-                Log.Info(3);
                 player.IsMuted = true;
                 player.IsIntercomMuted = true;
                 string userid = player.UserId;
@@ -28,7 +25,6 @@ namespace BetterMute
                 {
                     duration = result2;
                 }
-                Log.Info(4);
                 AddingMuteStatus(userid, duration);
                 response = $"{player.Nickname} will be muted for {duration} rounds";
             }
