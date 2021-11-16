@@ -2,6 +2,8 @@
 ## Overview
 Better mute allows admins to be able to mute a player for a specific amount of time(in rounds)
 
+It checks all muted players when round ends. If player left before round end, the remaining rounds needed to unmute do not change.
+
 ## Usage
 ``bmute <id> <rounds>``
 
@@ -10,5 +12,5 @@ Better mute allows admins to be able to mute a player for a specific amount of t
 
 ``data_dir`` - Path of the Mute file, it's located in the Plugins folder by default.
 
-## Notes
-It checks all muted players when round ends. If player left before round end, the remaining rounds do not change.
+## Suggestions?
+Create an issue or just PR
