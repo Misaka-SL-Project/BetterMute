@@ -14,5 +14,5 @@ It checks all muted players when round ends. If player left before round end, th
 
 ``data_dir`` - Path of the Mute file, it's located in the Plugins folder by default.
 
-## Suggestions?
-Create an issue or just PR
+## Questions or suggestions?
+Create an issue or Contact me through discord
