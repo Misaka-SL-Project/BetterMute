@@ -33,8 +33,41 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Mirror">
-      <HintPath>C:\Users\zhagu\Downloads\Dev\Mirror.dll</HintPath>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>..\..\..\..\Downloads\Dev\Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp-Publicized">
+      <HintPath>..\..\..\..\Downloads\Dev\Assembly-CSharp-Publicized.dll</HintPath>
+    </Reference>
+    <Reference Include="CommandSystem.Core">
+      <HintPath>..\..\..\..\Downloads\Dev\CommandSystem.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Exiled.API, Version=3.7.1.0, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>packages\EXILED.3.7.1\lib\net472\Exiled.API.dll</HintPath>
+    </Reference>
+    <Reference Include="Exiled.Bootstrap, Version=3.7.1.0, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>packages\EXILED.3.7.1\lib\net472\Exiled.Bootstrap.dll</HintPath>
+    </Reference>
+    <Reference Include="Exiled.CreditTags, Version=3.7.1.0, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>packages\EXILED.3.7.1\lib\net472\Exiled.CreditTags.dll</HintPath>
+    </Reference>
+    <Reference Include="Exiled.CustomItems, Version=3.7.1.0, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>packages\EXILED.3.7.1\lib\net472\Exiled.CustomItems.dll</HintPath>
+    </Reference>
+    <Reference Include="Exiled.CustomRoles, Version=3.7.1.0, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>packages\EXILED.3.7.1\lib\net472\Exiled.CustomRoles.dll</HintPath>
+    </Reference>
+    <Reference Include="Exiled.Events, Version=3.7.1.0, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>packages\EXILED.3.7.1\lib\net472\Exiled.Events.dll</HintPath>
+    </Reference>
+    <Reference Include="Exiled.Loader, Version=3.7.1.0, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>packages\EXILED.3.7.1\lib\net472\Exiled.Loader.dll</HintPath>
+    </Reference>
+    <Reference Include="Exiled.Permissions, Version=3.7.1.0, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>packages\EXILED.3.7.1\lib\net472\Exiled.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="Exiled.Updater, Version=3.1.1.0, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>packages\EXILED.3.7.1\lib\net472\Exiled.Updater.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -45,10 +78,7 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
     <Reference Include="UnityEngine.CoreModule">
-      <HintPath>C:\Users\zhagu\Downloads\Dev\UnityEngine.CoreModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.PhysicsModule">
-      <HintPath>C:\Users\zhagu\Downloads\Dev\UnityEngine.PhysicsModule.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\Dev\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -59,9 +89,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="EXILED">
-      <Version>6.0.0-beta.25</Version>
-    </PackageReference>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

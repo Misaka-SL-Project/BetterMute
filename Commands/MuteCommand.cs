@@ -14,14 +14,14 @@ namespace BetterMute
 
         public bool Execute(ArraySegment<string> arguments, ICommandSender sender, out string response)
         {
-            if (Int32.TryParse(arguments.At(0), out int result))
+            if (int.TryParse(arguments.At(0), out int result))
             {
                 Player player = Player.Get(result);
                 player.IsMuted = true;
                 player.IsIntercomMuted = true;
                 string userid = player.UserId;
                 int duration = 1;
-                if (Int32.TryParse(arguments.At(1), out int result2))
+                if (int.TryParse(arguments.At(1), out int result2))
                 {
                     duration = result2;
                 }
